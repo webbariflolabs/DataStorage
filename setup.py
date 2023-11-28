@@ -1,7 +1,7 @@
 # coding=utf-8
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "DataStorage"
+plugin_identifier = "data"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
 plugin_package = "DataStorage"
