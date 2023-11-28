@@ -14,29 +14,13 @@ class DataStoragePlugin(octoprint.plugin.SettingsPlugin,
         self._complete_data.append(data)
 
         # Write data to file in append mode
-        with open("/home/pi/.octoprint/data/logs/print_progress.txt", "a") as f:
+        with open("print_progress.txt", "a"):
             f.write(str(self._complete_data) + "\n")
 
         # Print the data for verification
         self._logger.info("Print Progress Data: {}".format(self._complete_data))
 
-    def get_update_information(self):
-        return dict(
-            data_storage=dict(
-                displayName="DataStorage",
-                displayVersion=self._plugin_version,
-
-                # version check: github repository
-                type="github_release",
-                user="YourGitHubUsername",  # Change this to your GitHub username
-                repo="OctoPrint-DataStorage",
-                current=self._plugin_version,
-
-                # update method: pip
-                pip="https://github.com/YourGitHubUsername/OctoPrint-DataStorage/archive/{target_version}.zip"
-            )
-        )
-
+    
 __plugin_name__ = "DataStorage"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
