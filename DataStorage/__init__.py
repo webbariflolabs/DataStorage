@@ -16,8 +16,10 @@ class DataStoragePlugin(octoprint.plugin.SettingsPlugin,
         # Write data to file in append mode
         abc=open("print_progress1.txt", "w"):
         abc.write(str(self._complete_data) + "\n")
+        abc.close()
         cde=open("print_progress2.txt", "w"):
         cde.write(str(data) + "\n")
+        cde.close()
 
         # Print the data for verification
         self._logger.info("Print Progress Data: {}".format(self._complete_data))
