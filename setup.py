@@ -1,10 +1,10 @@
 # coding=utf-8
 
 # The plugin's identifier, has to be unique
-plugin_identifier = "plugin"
+plugin_identifier = "DataStorage"
 
 # The plugin's python package, should be "octoprint_<plugin identifier>", has to be unique
-plugin_package = "octoprint_plugin"
+plugin_package = "DataStorage"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
